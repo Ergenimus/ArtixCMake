@@ -37,7 +37,7 @@ void userInput(int& a) {
 
 int main(int argc, char* argv[])
 {
-	setlocale(LC_ALL, "Russian");
+	locale::global(std::locale(""));
 	
 	for (int i = 1; i < argc; i++){
 		int a = atoi(argv[i]);

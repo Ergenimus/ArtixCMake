@@ -1,6 +1,6 @@
 @echo off
 
-sudo apt install cmake && (
+_winget install kitware.cmake_ && (
     echo Success!
 ) || (
     cls
@@ -15,15 +15,4 @@ sudo apt install cmake && (
     CarFactory 1 3
     pause
     cls
-)
-
-_winget install kitware.cmake_ && (
- echo Success!
-) || (
-    clear
-    echo Linux, right? Or maybe already installed.
-    cmake --version
-    cmake -S ~\TestCmake\builder\build
-    cmake --build ~\builder\build
-    cd Debug
 )
